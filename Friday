@@ -1,0 +1,102 @@
+# Daily Plan for Friday 1/31/2025
+
+## Objectives
+- Create unit tests
+- Review code coverage report
+
+## In Class Activities
+
+
+
+### Getting ready
+- Install pytest
+  - `pip install -U pytest` or `python3 -m pip install pytest`
+  - `-U` updates the package if it is already installed
+- Install coverage
+  - `pip install -U coverage` or `python3 -m pip install coverage`
+- Fork and clone [In Class Assignment 05](https://github.com/cptr152-spring2025/in-class-assignment-05)
+- Open repository folder with vscode
+  - VScode **MUST** be opened on the project folder, not on any other parent folder
+
+### Running and Writing Tests
+- Run tests
+  - `pytest`
+  - It runs files that start with `test_`
+  - It will look for all function names that start with `test_`
+  - Looking in the `src/my_math.py` and `tests/test_my_math.py` to see for an example
+
+Testing is software development is a technique that allows a programmer to run the code that they are writing under known conditions, and without running the whole program. So far, you have written somewhat simple programs with out a lot of code, so running the whole program to check to see if your logic is correct is not too difficult. But for larger pieces of software, it is not feasible to run the entire program, just to test a small part of it.
+
+There are several different types of testing:
+
+- Unit testing
+  - Where each module/component of the program is tested separately
+- Integration testing
+  - Where different modules/components are tested together
+- End to end testing
+  - Where the whole system is tested
+
+Modules or components are a logical grouping of actions. For example, there can be a component that reads files for the hard drive, another component that gets the content of this files and checks for the spelling. Each component can be tested separately, and also test together.
+
+In this course, we will cover unit testing thoroughly, touch upon integration testing, and no perform and end to end testing.
+
+### In Class example
+- Create Test for multiply function in `src/my_math`
+
+### Check for Understanding
+- Create test for difference function in `src/my_math`
+
+
+### Code Coverage
+- Run test coverage
+  - `coverage run -m pytest`
+  - It will update the coverage report on your codebase
+  - It shows which lines of code have been covered with tests. Which execution paths have been passed through. It is a helpful tool to get more information on how well your code is being covered by tests, but it will not provide enough information to write good tests. You'll still need an understanding on how your code is expected to behave.
+- Create coverage report
+  - `coverage report --show-missing`
+  - `coverage html`
+
+Test coverage shows how well your tests "trigger" the code paths in your code. When a function has loops or conditionals, your code can take different paths. When a test runs, it might not trigger all the code paths in a function. Multiple tests need to be created to cover all possible combinations.
+
+Code coverage is a useful tool to get an idea of how well your code base is tested
+
+
+### In class example
+- Check code coverage of absolute add function
+- Create 4 tests for absolute add function in `src/my_math`
+- Check code coverage
+
+### Check your understanding
+- Check code coverage for calculate birth year
+- create 2 tests for calculate birth year in `src/my_math`
+- Check code coverage to see how things are changed
+
+
+### Refactoring
+Once a function is sufficiently tested, and the behavior understood, then any changes made to the function logic can be made with more confidence. If the new code does not pass the tests, the changes are not successful. This work is called **refactoring** your code base
+
+### In Class example 
+- Run tests to make that everything is working
+- Refactor the if statement in get largest value in a list function in `src/my_funcs`
+  - The `if` and `elif` statements have the same code in their bodies, they can be combined
+- Run test to make sure that nothing broke
+
+### Check your understanding
+- Run tests to make sure that everything is working
+- Refactor the contents of the `for` loop so that `if` statement is in a different function
+  - where `get_largest_value` takes 2 values, and returns the largest value
+```python
+for c in l:
+  largest_value = get_largest_value(largest_value, c)
+```
+
+#### Stretch your understanding
+- Add tests for `get_largest_value`
+
+
+## Resources
+- [Pytest documentation](https://docs.pytest.org/en/stable/)
+- [Coverage documentation](https://coverage.readthedocs.io/en/7.6.10/)
+
+## Assigned
+- [In Class Assignment 05](https://github.com/cptr152-spring2025/in-class-assignment-05)

@@ -8,3 +8,4 @@ def get_largest_value_in_list(l):
         elif e > largest_value:
             largest_value = e    
     return largest_value
+print(get_largest_value_in_list([15, 2, 3, 4, 5]))

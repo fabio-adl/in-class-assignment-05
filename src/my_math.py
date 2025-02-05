@@ -19,7 +19,9 @@ def absolute_sum(a,b):
         return abs(a) + abs(b)
     else:
         return a + b
-    
+
+print(absolute_sum(-1,1))
+
 # Calculates birth year with a current year and an age
 # takes into account if the birthday has already occurred
 def calculate_birth_year(current_year, age, had_birthday_in_current_year):
@@ -27,3 +29,5 @@ def calculate_birth_year(current_year, age, had_birthday_in_current_year):
     if not had_birthday_in_current_year:
         return birth_year - 1
     return birth_year
+
+print(calculate_birth_year(2025, 43, False))
